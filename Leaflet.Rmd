@@ -1,0 +1,21 @@
+---
+title: "R Markdown Leaflet"
+
+output: html_document
+---
+```{r}
+library(leaflet)
+```
+##My Favorite Taco Shop
+##10/27/2018
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+m = leaflet()
+m = addTiles(m)
+m = addMarkers(m, lat=32.79748333, lng=-117.2519444, popup="My Favorite Taco Shop")
+m
+```
